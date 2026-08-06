@@ -1,2 +1,8 @@
-# safe-cracker-game
-You are a junior security analyst racing against time to bypass the office vault's multi-layer security system. Each successful stage brings you closer to opening the vault, but one wrong move and the system locks you out permanently. Can you keep your composure when the pressure mounts?
+# Project Notes
+
+**Challenge:** TORIS Beat the Clock  
+**Team:** Code Breakers  
+**Members:** Mpho Buthelezi and JP De Jager  
+**Game:** Vault Rush: Beat the Lockdown
+
+A junior security analyst must bypass a digital vault’s three security layers before the selected lockdown timer completes. The game combines memory, speed, accuracy, escalating grid sizes, and a final Power Outage that rearranges the security keypad without changing the memorised sequence.

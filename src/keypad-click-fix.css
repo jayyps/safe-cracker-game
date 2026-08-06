@@ -1,0 +1,72 @@
+/* Vault Rush v1.2.1 - laptop keypad click fix
+   Add this block at the very end of src/index.css. */
+
+/* Keep the interactive laptop screen above every decorative 3D layer. */
+.laptop-scene {
+  position: relative;
+  isolation: isolate;
+}
+
+.laptop-lid {
+  position: relative;
+  z-index: 10;
+}
+
+.laptop-screen {
+  position: relative;
+  z-index: 11;
+  isolation: isolate;
+}
+
+.laptop-screen .grid-frame {
+  position: relative;
+  z-index: 12;
+  pointer-events: auto;
+}
+
+.laptop-screen .security-grid {
+  position: relative;
+  z-index: 13;
+  pointer-events: auto;
+}
+
+.laptop-screen .security-key {
+  position: relative;
+  z-index: 14;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+/* The base and laptop details are visual only. Their transformed boxes must
+   never intercept mouse or touch input intended for the keypad. */
+.laptop-base,
+.laptop-keyboard,
+.laptop-trackpad,
+.laptop-sticker,
+.laptop-foot,
+.laptop-camera,
+.laptop-screen-header,
+.hazard-backdrop,
+.hazard-stripes,
+.hazard-scan,
+.hazard-beacon,
+.security-bot,
+.bot-antenna,
+.bot-head,
+.bot-face,
+.bot-body,
+.bot-shadow {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Keep the decorative base behind the screen even on browsers that create
+   unexpected stacking contexts for 3D transforms. */
+.laptop-base {
+  z-index: 0;
+}
+
+/* Only the actual outage overlay should block the keypad. */
+.power-outage-overlay {
+  pointer-events: auto;
+}
